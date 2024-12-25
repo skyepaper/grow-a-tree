@@ -42,7 +42,7 @@ function switchDisplay(word) {
    </div>
 
    <div className="display tree" >
-      <div className="steps">1000</div>
+      <div className="steps">2222</div>
    </div>
 
    <div className="display map" >map</div>
