@@ -18,6 +18,7 @@ function startCount() {
 
   let boxA=document.querySelector('.box-first')
   let boxB=document.querySelector('.box-second')
+  let boxC=document.querySelector('.box-third')
 
   let flag=1
   let count=0
@@ -81,6 +82,7 @@ if(window.innerWidth <= 800) {
        }
      
      let diff=max-min
+     let text=''
      if(diff>500) {
          let percent=0
          arr.forEach(mark=>{
@@ -89,18 +91,25 @@ if(window.innerWidth <= 800) {
            mark.style.height=`${percent}%`
            if(percent>80) {
              mark.style.backgroundColor='blue'
-             count++
-             setSteps(count)
+             text=text+' 5'
+             //count++
+             //setSteps(count)
            } else if(percent>60) {
               mark.style.backgroundColor='lightblue'
+              text=text+' 5'
            } else if(percent>40) {
               mark.style.backgroundColor='lightblue'
+              text=text+' 5'
            } else if(percent>20) {
               mark.style.backgroundColor='orange'
+              text=text+' 0'
            } else  {
               mark.style.backgroundColor='black'
+              text=text+' 0'
            }
          })
+
+         boxC.textContent=text
      }
       
    }
@@ -138,6 +147,7 @@ if(window.innerWidth <= 800) {
       <div className="steps">1000</div>
       <div class="box-first"></div>
       <div class="box-second"></div>
+      <div className="box-third"></div>
    </div>
 
    <div className="display tree" >
