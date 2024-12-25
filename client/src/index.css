@@ -115,3 +115,29 @@ button:active .top::before {
   font-weight: bold;
   text-align: center;
 }
+.box-first {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  display: flex;
+  gap: 0px;
+  margin-top: 10px;
+}
+.box-second {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  display: flex;
+  gap: 0px;
+  margin-top: 10px;
+}
+.mark {
+  height: 100%;
+  min-width: 6px;
+  max-width: 6px;
+  font-size: 10px;
+  background-color: red;
+  writing-mode: vertical-lr;
+  font-size: 5px;
+  align-self: end;
+}
