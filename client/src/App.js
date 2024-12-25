@@ -21,7 +21,6 @@ function startCount() {
 
   let flag=1
   let count=0
-  let isMobile=0
 
 window.addEventListener('devicemotion', function(event) {
   
@@ -29,11 +28,8 @@ window.addEventListener('devicemotion', function(event) {
     let accY = event.accelerationIncludingGravity.y;
     let accZ = event.accelerationIncludingGravity.z;
 
-    if(accX) {
-      isMobile=1
-    }
 
-    if(isMobile===1) {
+    if(window.innerWidth <= 800) {
 
       let curX=Math.ceil(Math.abs(accX.toFixed(2))*100)   
       let curY=Math.ceil(Math.abs(accY.toFixed(2))*100)   
@@ -55,7 +51,7 @@ window.addEventListener('devicemotion', function(event) {
       
 })
 
-if(isMobile===1) {
+if(window.innerWidth <= 800) {
 
   let interval=setInterval(()=>{
   
