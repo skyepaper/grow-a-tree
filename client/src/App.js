@@ -38,7 +38,7 @@ function switchDisplay(word) {
    </div>
    
    <div className="display count" >
-      <div className="steps">1000</div>
+      <div className="steps">1111</div>
    </div>
 
    <div className="display tree" >
