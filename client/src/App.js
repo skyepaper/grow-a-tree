@@ -21,7 +21,7 @@ function startCount() {
   let boxC=document.querySelector('.box-third')
 
   let flag=1
-  let count=0
+  let stepCount=0
 
 window.addEventListener('devicemotion', function(event) {
   
@@ -92,8 +92,7 @@ if(window.innerWidth <= 800) {
            if(percent>80) {
              mark.style.backgroundColor='blue'
              text=text+' 5'
-             //count++
-             //setSteps(count)
+             
            } else if(percent>60) {
               mark.style.backgroundColor='lightblue'
               text=text+' 5'
@@ -109,9 +108,17 @@ if(window.innerWidth <= 800) {
            }
          })
 
-           //boxC.textContent=text
          let arrText=text.split('0')
-         boxC.textContent=arrText
+
+         arrText.forEach(part=>{
+          let matches = part.match(new RegExp('5', 'g'))
+          let count = matches ? matches.length : 0
+
+          if(count>2 && count<7) stepCount++
+
+         })
+         setSteps(stepCount)
+       
      }
       
    }
@@ -146,7 +153,7 @@ if(window.innerWidth <= 800) {
    </div>
    
    <div className="display count" >
-      <div className="steps">1000</div>
+      <div className="steps">{steps}</div>
       <div class="box-first"></div>
       <div class="box-second"></div>
       <div className="box-third"></div>
