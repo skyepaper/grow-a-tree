@@ -109,7 +109,9 @@ if(window.innerWidth <= 800) {
            }
          })
 
-         boxC.textContent=text
+           //boxC.textContent=text
+         let arrText=text.split('0')
+         boxC.textContent=arrText
      }
       
    }
