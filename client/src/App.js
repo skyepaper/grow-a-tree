@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 function App() {
 
-  const [steps, setSteps] = useState(0);
-  const [maxSteps, setMaxSteps] = useState(200);
+  const [steps, setSteps] = useState(0)
+  const stepsRef = useRef(steps)
+  const [maxSteps, setMaxSteps] = useState(200)
+
+  useEffect(() => {
+    stepsRef.current = steps
+  }, [steps])
 
 function switchDisplay(word) {
   let arr=document.querySelectorAll('.display')
@@ -147,7 +152,7 @@ if(window.innerWidth <= 800) {
     })
    
    
-   let num = Math.floor(steps/maxSteps*100)
+   let num = Math.floor(stepsRef.current/maxSteps*100)
    
    let count=Math.ceil(num/10)
    for(let i=1;i<=count;i++) {
