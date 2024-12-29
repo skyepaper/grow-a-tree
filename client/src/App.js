@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
 
-  const [steps, setSteps] = useState(100);
+  const [steps, setSteps] = useState(0);
   const [maxSteps, setMaxSteps] = useState(200);
 
 function switchDisplay(word) {
