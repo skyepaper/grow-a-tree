@@ -148,6 +148,7 @@ button:active .top::before {
   width: 95%;
   margin: 5px;
   background-color: lightblue;
+  overflow: hidden;
 }
 
 .pole {
