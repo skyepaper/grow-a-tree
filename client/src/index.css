@@ -102,7 +102,7 @@ button:active .top::before {
   width: 100%;
   background-color:  #80852c;;
 }
-.count {
+.tree {
   display: none;
 }
 .map {
@@ -142,4 +142,72 @@ button:active .top::before {
   writing-mode: vertical-lr;
   font-size: 5px;
   align-self: end;
+}
+.card {
+  height: 80%;
+  width: 95%;
+  margin: 5px;
+  background-color: lightblue;
+}
+
+.pole {
+  height: 9.7%;
+  width: 4px;
+  margin: 0 auto;
+  background-color: #400f04;
+  position: relative;
+  visibility: hidden;
+  border-radius: 5px 5px 0 0;
+}
+.branch {
+  height: 1px;
+  width: 20vw;
+  background-color: #6c1c0a;
+  border-radius: 0 0 100% 0;
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+.br-left {
+  transform: rotate(195deg);
+  transform-origin: top left;
+}
+.br-right {
+  transform: rotate(-15deg);
+  transform-origin: top left;
+  left: 90%;
+}
+.hidden {
+  visibility: hidden;
+}
+.stick {
+  height: 3px;
+  width: 20px;
+  margin-left: 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+  transform-origin: top left;
+  background-color: #733d0f;
+  overflow: visible;
+}
+.shade {
+  height: 45px;
+  width: 100%;
+  background-color: lightgreen;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  border-radius:50%;
+  opacity: .6;
+}
+.leaf {
+  height: 8px;
+  width: 8px;
+  border-radius:50%;
+  opacity: 1.5;
+  position: absolute;
+  z-index: 2;
+  background-color: #22ca2e;
 }
